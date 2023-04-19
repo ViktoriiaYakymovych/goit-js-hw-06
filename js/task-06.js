@@ -2,7 +2,7 @@ const inputEl = document.querySelector('#validation-input');
 const textLength = Number(inputEl.getAttribute('data-length'));
 
 inputEl.addEventListener('blur', () => {
-    const value = inputEl.value;
+    const value = inputEl.value.trim();
     const length = value.length;
 
     if (length === textLength) {

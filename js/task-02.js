@@ -7,15 +7,27 @@ const ingredients = [
   'Condiments',
 ];
 
+// const listEl = document.getElementById('ingredients');
+
+//   ingredients.forEach(ingredient => {
+//   const makeItem = document.createElement('li');
+//   makeItem.textContent = ingredient;
+//   makeItem.classList.add('item');
+//   const makeItems = makeItem;
+//   listEl.append(...makeItems);
+// });
+
+
+// console.log(listEl);
+
+
 const listEl = document.getElementById('ingredients');
 
-  ingredients.forEach(ingredient => {
-  const makeItem = document.createElement('li');
+const makeItems = ingredients.map((ingredient) => {
+  const makeItem = document.createElement("li");
   makeItem.textContent = ingredient;
-  makeItem.classList.add('item');
-  const makeItems = makeItem;
-  listEl.append(makeItems);
+  makeItem.classList.add("item");
+  return makeItem;
 });
 
-
-console.log(listEl);
+listEl.append(...makeItems);
